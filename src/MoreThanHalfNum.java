@@ -12,6 +12,16 @@ import java.util.Arrays;
  * 如果不存在则输出0。
  */
 public class MoreThanHalfNum {
+
+    /**
+     * 解题思路:
+     * 如果数组中某数字出现的次数超过数组长度的一半,那么在排序后,该数一定在数组的中间;
+     * 先进行快排,然后取数组最中间的数;
+     * 遍历该数组,如果最中间的数出现的次数超过数组长度的一半,则输出这个数;
+     *
+     * @param array
+     * @return
+     */
     public static int moreThanHalfNum_Solution(int [] array) {
         if(array.length == 0 || array == null){
             return 0;
